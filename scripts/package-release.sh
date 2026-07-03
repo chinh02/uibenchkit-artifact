@@ -37,7 +37,6 @@ docker save ghcr.io/chinh02/uibenchkit-gui:${version} \
 
 (
   cd "${release_dir}"
-  sha256sum ./* > SHA256SUMS
+  sha256sum ./*.tar.gz > SHA256SUMS
 )
 echo "Release artifacts written to ${release_dir}"
-

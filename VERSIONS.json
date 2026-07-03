@@ -14,15 +14,20 @@
   "images": {
     "backend": {
       "tag": "ghcr.io/chinh02/uibenchkit-backend:v1.0.0-ase2026",
-      "digest": "pending-build-and-push"
+      "image_id": "sha256:55a8ea16e550ba962bb94e5df1f149bda3e08a21d7493028cf2b2df7cb9589d8",
+      "registry_digest": "pending-ghcr-push",
+      "archive_sha256": "d43969568cee481bb63ca5f257b28d8ec8b48f952e40dfe15ba40ab28ead8133"
     },
     "gui": {
       "tag": "ghcr.io/chinh02/uibenchkit-gui:v1.0.0-ase2026",
-      "digest": "pending-build-and-push"
+      "image_id": "sha256:8a791d33758bb573fce43729f0d3c5cefbece5dbdfc7594e243486061edb0f01",
+      "registry_digest": "pending-ghcr-push",
+      "archive_sha256": "20296e48e12a8b8481e0f5314244964ff2f03fd3da2a386f5c20ad1bf7c1d622"
     }
   },
   "base_images": {
     "python": "python:3.11-slim-bookworm@sha256:721dc13fd1be0a771e54b72097634291d628d0007dee9da777e2ce676a9c998f",
-    "node": "node:22-bookworm-slim@sha256:813a7480f28fdadac1f7f5c824bcdad435b5bc1322a5968bbbdef8d058f9dff4"
+    "node": "node:22-bookworm-slim@sha256:813a7480f28fdadac1f7f5c824bcdad435b5bc1322a5968bbbdef8d058f9dff4",
+    "dockerfile_frontend": "docker/dockerfile:1.7@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e"
   }
 }

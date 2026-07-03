@@ -11,7 +11,10 @@
 ## Current Archival Status
 
 The source package and images are prepared for archival. The final Zenodo DOI
-and post-push GHCR digests must be inserted after publication.
+and post-push GHCR digests must be inserted after publication. The paid smoke
+test also requires a funded key; the currently configured gateway credential
+returned `insufficient_user_quota`. Key-free validation results are recorded in
+`VALIDATION.md`.
 
 ## Limitations
 
@@ -20,4 +23,3 @@ and post-push GHCR digests must be inserted after publication.
 - Full benchmark reproduction is excluded from the under-30-minute workflow.
 - Published raw results remain in the referenced Hugging Face dataset rather
   than being duplicated in the container images.
-

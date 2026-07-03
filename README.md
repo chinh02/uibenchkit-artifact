@@ -19,6 +19,7 @@ badges. The archival DOI will be inserted after the Zenodo deposit is created.
 - An OpenAI API key with access to `gpt-4o`.
 
 See [REQUIREMENTS.md](REQUIREMENTS.md) for the full environment specification.
+Reference-host test evidence is recorded in [VALIDATION.md](VALIDATION.md).
 
 ### 2. Obtain the artifact
 
@@ -183,4 +184,3 @@ of the reviewer's account.
 Exact source and dataset revisions are listed in [VERSIONS.json](VERSIONS.json).
 Original UIBenchKit and artifact packaging code are MIT licensed. Incorporated
 and referenced research code is documented in [NOTICE.md](NOTICE.md).
-
