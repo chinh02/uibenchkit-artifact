@@ -21,6 +21,8 @@ Validation date: 2026-07-03
 - Backend and GUI production images built successfully from a clean expanded
   source archive.
 - Backend, CLI, GUI, all five method imports, and Compose health checks passed.
+- Packaged Python metadata passed `python -m pip check`; the CLI constraint is
+  enforced by pinning Click 8.1.8 and by running the check during image builds.
 - Public leaderboard loading without `GITHUB_TOKEN` passed.
 - Headless Chromium rendering of `/` and `/live-demo` passed without page
   errors.
@@ -35,11 +37,12 @@ Validation date: 2026-07-03
 
 | Image | Uncompressed size | Compressed archive | Archive SHA-256 |
 | --- | ---: | ---: | --- |
-| Backend | 4.68 GB | 1.7 GB | `43cf45447c9cf0904f87f9622e0af486ac01410b9aea4e01cf52f1ffa1c16e14` |
+| Backend | 4.68 GB | 1.7 GB | `61bdc9de1ec27d3fdf9c38ade72739a81d73e172677c6e02326aadf536765405` |
 | GUI | 257 MB | 84 MB | `20296e48e12a8b8481e0f5314244964ff2f03fd3da2a386f5c20ad1bf7c1d622` |
 
-Image export, checksum, removal, reload, and health validation took 337 seconds
-on the reference VM.
+The corrected backend cold build took 260 seconds. Maximum-compression export
+and checksum verification took 750 seconds; archive-only reload and complete
+key-free health validation took 85 seconds on the reference VM.
 
 ## External Blocker
 
