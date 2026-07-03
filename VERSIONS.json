@@ -1,0 +1,28 @@
+{
+  "artifact_version": "v1.0.0-ase2026",
+  "source_repositories": {
+    "UIBenchKit": "e8d2c8d5f553136f531f9a36b288e2c553755781",
+    "uibenchkit-cli": "1709edde06d71d92039bda0c5790844e691a9fb8",
+    "uibenchkit-GUI": "d5b0925859dfd9cec5f4452bb01cfa502fae644b",
+    "uibenchkit-experiments": "daaf9e853b98fbb878384ffad964a9b458684435"
+  },
+  "huggingface": {
+    "repository": "chinh02/UIBenchKit",
+    "repository_type": "dataset",
+    "revision": "a107b7da78ce3c15c6bd5b204e3bcc9024b9a76e"
+  },
+  "images": {
+    "backend": {
+      "tag": "ghcr.io/chinh02/uibenchkit-backend:v1.0.0-ase2026",
+      "digest": "pending-build-and-push"
+    },
+    "gui": {
+      "tag": "ghcr.io/chinh02/uibenchkit-gui:v1.0.0-ase2026",
+      "digest": "pending-build-and-push"
+    }
+  },
+  "base_images": {
+    "python": "python:3.11-slim-bookworm@sha256:721dc13fd1be0a771e54b72097634291d628d0007dee9da777e2ce676a9c998f",
+    "node": "node:22-bookworm-slim@sha256:813a7480f28fdadac1f7f5c824bcdad435b5bc1322a5968bbbdef8d058f9dff4"
+  }
+}

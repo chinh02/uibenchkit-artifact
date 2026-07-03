@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+dist/
+release/
+*.tar
+*.tar.gz
+*.tar.zst
+SHA256SUMS
+.pytest_cache/
+__pycache__/
+

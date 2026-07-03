@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the UIBenchKit paper."
+title: "UIBenchKit: A unified toolkit for design-to-code model evaluation"
+type: software
+version: 1.0.0
+date-released: 2026-07-03
+license: MIT
+authors:
+  - family-names: Le
+    given-names: Chinh T.
+  - family-names: Ong
+    given-names: Trevor Yee Siang
+  - family-names: Xiao
+    given-names: Jingyu
+  - family-names: Wan
+    given-names: Yuxuan
+  - family-names: Huo
+    given-names: Yintong
+repository-code: "https://github.com/chinh02/uibenchkit-artifact"
+url: "https://www.uibenchkit.com/"
+

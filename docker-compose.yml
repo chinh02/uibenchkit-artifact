@@ -1,0 +1,68 @@
+name: uibenchkit-artifact
+
+services:
+  backend:
+    image: ghcr.io/chinh02/uibenchkit-backend:v1.0.0-ase2026
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    environment:
+      UIBENCHKIT_API_KEY: ${UIBENCHKIT_API_KEY:-artifact-local-key}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      TMPDIR: /shared-tmp
+      PYTHONUNBUFFERED: "1"
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - results:/opt/uibenchkit/backend/results
+      - shared-tmp:/shared-tmp
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=5)"
+      interval: 10s
+      timeout: 6s
+      retries: 18
+      start_period: 90s
+    restart: unless-stopped
+
+  gui:
+    image: ghcr.io/chinh02/uibenchkit-gui:v1.0.0-ase2026
+    build:
+      context: .
+      dockerfile: docker/gui.Dockerfile
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      PORT: "3000"
+      UIBENCHKIT_API_URL: http://backend:5000
+      UIBENCHKIT_API_KEY: ${UIBENCHKIT_API_KEY:-artifact-local-key}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      GITHUB_REPO: ${GITHUB_REPO:-chinh02/uibenchkit-experiments}
+      GITHUB_BRANCH: ${GITHUB_BRANCH:-main}
+      TMPDIR: /shared-tmp
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - results:/opt/uibenchkit/backend/results:ro
+      - shared-tmp:/shared-tmp
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:3000/api/ping').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+      interval: 10s
+      timeout: 6s
+      retries: 12
+      start_period: 20s
+    restart: unless-stopped
+
+volumes:
+  results:
+  shared-tmp:
+

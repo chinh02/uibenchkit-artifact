@@ -1,0 +1,12 @@
+[submodule "UIBenchKit"]
+	path = UIBenchKit
+	url = https://github.com/chinh02/UIBenchKit.git
+[submodule "uibenchkit-cli"]
+	path = uibenchkit-cli
+	url = https://github.com/chinh02/uibenchkit-cli.git
+[submodule "uibenchkit-GUI"]
+	path = uibenchkit-GUI
+	url = https://github.com/chinh02/uibenchkit-GUI.git
+[submodule "uibenchkit-experiments"]
+	path = uibenchkit-experiments
+	url = https://github.com/chinh02/uibenchkit-experiments.git
