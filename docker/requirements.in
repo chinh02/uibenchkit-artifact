@@ -2,6 +2,7 @@ accelerate==1.13.0
 anthropic==0.75.0
 beautifulsoup4==4.14.3
 boto3==1.42.34
+click==8.1.8
 colormath==3.0.0
 datasets==4.4.2
 easyocr==1.7.2

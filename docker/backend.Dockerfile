@@ -31,6 +31,7 @@ WORKDIR /opt/uibenchkit
 COPY UIBenchKit/ backend/
 COPY uibenchkit-cli/ cli/
 RUN python -m pip install --no-deps /opt/uibenchkit/cli \
+    && python -m pip check \
     && mkdir -p /opt/uibenchkit/cache /opt/uibenchkit/backend/results /shared-tmp \
     && python -c "import open_clip; open_clip.create_model_and_transforms('ViT-B-32-quickgelu', pretrained='openai')" \
     && groupadd --gid ${APP_GID} uibenchkit \
