@@ -14,7 +14,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     HF_HOME=/opt/uibenchkit/cache/huggingface \
     TMPDIR=/shared-tmp
 
-RUN apt-get update \
+RUN mkdir -p /shared-tmp \
+    && apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl git tini \
     && rm -rf /var/lib/apt/lists/*
 
