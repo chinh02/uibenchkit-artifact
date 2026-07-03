@@ -35,7 +35,7 @@ Validation date: 2026-07-03
 
 | Image | Uncompressed size | Compressed archive | Archive SHA-256 |
 | --- | ---: | ---: | --- |
-| Backend | 4.68 GB | 1.7 GB | `d43969568cee481bb63ca5f257b28d8ec8b48f952e40dfe15ba40ab28ead8133` |
+| Backend | 4.68 GB | 1.7 GB | `43cf45447c9cf0904f87f9622e0af486ac01410b9aea4e01cf52f1ffa1c16e14` |
 | GUI | 257 MB | 84 MB | `20296e48e12a8b8481e0f5314244964ff2f03fd3da2a386f5c20ad1bf7c1d622` |
 
 Image export, checksum, removal, reload, and health validation took 337 seconds
