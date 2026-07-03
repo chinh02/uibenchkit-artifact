@@ -15,7 +15,8 @@
 - 25 GB free disk for loading images and running the smoke test.
 - 60 GB free disk when rebuilding images and exporting release archives.
 - Internet access to `api.openai.com` and public GitHub content.
-- OpenAI API key with GPT-4o vision access for the real-model smoke test.
+- Author-supplied, rate-limited OpenAI API key with GPT-4o vision access for
+  the real-model smoke test; it is provided confidentially during review.
 
 Docker Desktop on Windows or macOS is acceptable when configured for Linux
 containers and at least 8 GB memory. Native Linux is preferred.
@@ -28,4 +29,3 @@ containers and at least 8 GB memory. Native Linux is preferred.
 - Full benchmark reproduction can exceed one day and incur API charges.
 
 No GPU is required for installation checks or the reduced smoke test.
-

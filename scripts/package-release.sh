@@ -34,9 +34,11 @@ docker save ghcr.io/chinh02/uibenchkit-backend:${version} \
   | gzip -9 > "${release_dir}/uibenchkit-backend-${version}.tar.gz"
 docker save ghcr.io/chinh02/uibenchkit-gui:${version} \
   | gzip -9 > "${release_dir}/uibenchkit-gui-${version}.tar.gz"
+cp "${root}/output/pdf/UIBenchKit-ASE2026-Artifact-Abstract.pdf" \
+  "${release_dir}/UIBenchKit-ASE2026-Artifact-Abstract.pdf"
 
 (
   cd "${release_dir}"
-  sha256sum ./*.tar.gz > SHA256SUMS
+  sha256sum ./*.tar.gz ./UIBenchKit-ASE2026-Artifact-Abstract.pdf > SHA256SUMS
 )
 echo "Release artifacts written to ${release_dir}"
