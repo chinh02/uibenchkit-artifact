@@ -37,7 +37,7 @@ RUN python -m pip install --no-deps /opt/uibenchkit/cli \
     && useradd --uid ${APP_UID} --gid ${APP_GID} --create-home uibenchkit \
     && chown -R ${APP_UID}:${APP_GID} /opt/uibenchkit /ms-playwright /shared-tmp
 
-COPY scripts/ /artifact/scripts/
+COPY scripts/validate_smoke.py scripts/validate_services.py /artifact/scripts/
 COPY smoke-data/ /artifact/smoke-data/
 RUN chown -R ${APP_UID}:${APP_GID} /artifact
 
