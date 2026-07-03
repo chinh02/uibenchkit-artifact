@@ -4,7 +4,7 @@ Validation date: 2026-07-03
 
 ## Host
 
-- Google Compute Engine instance: `web-bench`
+- Google Compute Engine validation host
 - Region/zone: `asia-southeast1-c`
 - OS: Debian 12, Linux `6.1.0-49-cloud-amd64`
 - Architecture: x86-64
