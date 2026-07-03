@@ -1,5 +1,9 @@
 {
   "artifact_version": "v1.0.0-ase2026",
+  "zenodo": {
+    "doi": "10.5281/zenodo.21175610",
+    "url": "https://doi.org/10.5281/zenodo.21175610"
+  },
   "source_repositories": {
     "UIBenchKit": "e8d2c8d5f553136f531f9a36b288e2c553755781",
     "uibenchkit-cli": "1709edde06d71d92039bda0c5790844e691a9fb8",

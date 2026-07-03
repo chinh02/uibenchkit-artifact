@@ -2,8 +2,7 @@
 
 **UIBenchKit: A unified toolkit for design-to-code model evaluation**
 
-Accepted paper link: to be replaced with the camera-ready public URL before
-the ASE artifact submission deadline.
+Accepted paper: https://arxiv.org/pdf/2605.13141
 
 # Purpose
 
@@ -41,7 +40,8 @@ smoke test. The packaged architecture is Linux AMD64. A minimum of 2 CPU cores,
 8 GB RAM, and 25 GB free disk is required. No GPU is required for the reduced
 workflow. Rebuilding images benefits from 4 CPU cores, 16 GB RAM, and 60 GB
 free disk. The real-model smoke test requires internet access and a
-reviewer-provided OpenAI API key with GPT-4o access.
+author-supplied, rate-limited OpenAI API key provided confidentially to
+reviewers, with GPT-4o access.
 
 # Provenance
 
@@ -51,16 +51,16 @@ Raw benchmark artifacts: https://huggingface.co/datasets/chinh02/UIBenchKit
 
 Project website: https://www.uibenchkit.com/
 
-Archival DOI: pending Zenodo deposit.
+Archival DOI: https://doi.org/10.5281/zenodo.21175610
 
 # Instructions
 
 Reviewers load the two supplied image archives with `docker load`, start the
 services using `docker compose up -d --wait`, and run
 `./scripts/health-check.sh`. This key-free check confirms backend, GUI, and CLI
-connectivity. For the full reduced workflow, reviewers place their OpenAI key
-in an untracked `.env`, export it, and run `./scripts/smoke.sh`. Expected output
+connectivity. For the full reduced workflow, reviewers place the confidentially
+supplied OpenAI key in an untracked `.env`, export it, and run
+`./scripts/smoke.sh`. Expected output
 ends with `SMOKE TEST PASSED` and includes the run identifier and computed CLIP
 score. Detailed commands, expected output, cleanup, claim coverage, and the
 long-running workflow are in the main README.
-

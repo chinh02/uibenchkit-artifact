@@ -6,8 +6,14 @@ backend, CLI, web interface, and lightweight experiment manifests as pinned
 source repositories, plus prebuilt Linux containers for the executable
 services.
 
+Accepted paper: https://arxiv.org/pdf/2605.13141
+
+Archival release: https://doi.org/10.5281/zenodo.21175610
+
+Artifact abstract: [PDF](output/pdf/UIBenchKit-ASE2026-Artifact-Abstract.pdf)
+
 The artifact applies for the **Artifacts Available** and **Artifacts Reusable**
-badges. The archival DOI will be inserted after the Zenodo deposit is created.
+badges.
 
 ## Getting Started (under 30 minutes)
 
@@ -16,7 +22,8 @@ badges. The archival DOI will be inserted after the Zenodo deposit is created.
 - x86-64 host with Docker Engine 24+ and Docker Compose v2.20+.
 - At least 8 GB RAM and 25 GB free storage.
 - Internet access for the real GPT-4o smoke call and public leaderboard data.
-- An OpenAI API key with access to `gpt-4o`.
+- The author-supplied, rate-limited OpenAI API key provided confidentially to
+  reviewers, with access to `gpt-4o`.
 
 See [REQUIREMENTS.md](REQUIREMENTS.md) for the full environment specification.
 Reference-host test evidence is recorded in [VALIDATION.md](VALIDATION.md).
