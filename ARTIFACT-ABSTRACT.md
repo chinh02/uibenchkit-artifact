@@ -4,7 +4,9 @@
 
 **UIBenchKit: A Unified Toolkit for Design-to-Code Model Evaluation**
 
-Accepted paper: https://arxiv.org/pdf/2605.13141
+# Link to the accepted paper
+
+https://arxiv.org/pdf/2605.13141
 
 # Purpose
 
