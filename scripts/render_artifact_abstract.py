@@ -28,7 +28,7 @@ def inline_markup(text: str) -> str:
 
 def footer(canvas, document) -> None:
     canvas.saveState()
-    canvas.setFont("Helvetica", 7)
+    canvas.setFont("Helvetica", 9)
     canvas.setFillColor(colors.HexColor("#555555"))
     canvas.drawString(18 * mm, 10 * mm, "UIBenchKit ASE 2026 Artifact")
     canvas.drawRightString(192 * mm, 10 * mm, f"Page {document.page}")
@@ -41,20 +41,20 @@ def render(source: Path, destination: Path) -> None:
         "Title",
         parent=styles["Title"],
         fontName="Helvetica-Bold",
-        fontSize=14,
-        leading=17,
+        fontSize=18,
+        leading=22,
         alignment=TA_CENTER,
-        spaceAfter=5,
+        spaceAfter=8,
         textColor=colors.HexColor("#111111"),
     )
     heading = ParagraphStyle(
         "Heading",
         parent=styles["Heading1"],
         fontName="Helvetica-Bold",
-        fontSize=10.2,
-        leading=12.5,
-        spaceBefore=7,
-        spaceAfter=3,
+        fontSize=14,
+        leading=17,
+        spaceBefore=10,
+        spaceAfter=5,
         keepWithNext=True,
         textColor=colors.HexColor("#17365D"),
     )
@@ -62,9 +62,9 @@ def render(source: Path, destination: Path) -> None:
         "Body",
         parent=styles["BodyText"],
         fontName="Helvetica",
-        fontSize=9.1,
-        leading=11.6,
-        spaceAfter=4,
+        fontSize=12,
+        leading=15.2,
+        spaceAfter=7,
         textColor=colors.HexColor("#222222"),
     )
 
