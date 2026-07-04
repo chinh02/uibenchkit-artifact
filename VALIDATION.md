@@ -24,11 +24,17 @@ Validation dates: 2026-07-03 to 2026-07-04
 - Packaged Python metadata passed `python -m pip check`; the CLI constraint is
   enforced by pinning Click 8.1.8 and by running the check during image builds.
 - Public leaderboard loading without `GITHUB_TOKEN` passed.
+- All 37 archived result manifests resolved at the pinned Hugging Face revision;
+  rebuilding the leaderboard twice produced byte-identical outputs with 17
+  DCGen results and 20 Design2Code results.
 - Headless Chromium rendering of `/` and `/live-demo` passed without page
   errors.
 - Shared temporary and result-volume behavior passed, including backend
   restart and GUI HTML/PNG retrieval.
 - Missing-key handling and source/image-history secret scans passed.
+- Exported-layer scans covered all 15 backend and 10 GUI layers and found no
+  environment files, private keys, or credential markers. The incorporated
+  Design2Code license is present in the backend image and source archive.
 - Image archives passed SHA-256 verification, were removed from Docker,
   reloaded solely from their archives, and passed the complete key-free health
   and browser workflow again.
@@ -40,12 +46,12 @@ Validation dates: 2026-07-03 to 2026-07-04
 
 | Image | Uncompressed size | Compressed archive | Archive SHA-256 |
 | --- | ---: | ---: | --- |
-| Backend | 4.68 GB | 1.7 GB | `61bdc9de1ec27d3fdf9c38ade72739a81d73e172677c6e02326aadf536765405` |
+| Backend | 4.68 GB | 1.7 GB | `db27a7598c3106ad9043bc223d1800783695e2ef1bb93572df4bf3bc4e609f6c` |
 | GUI | 257 MB | 84 MB | `20296e48e12a8b8481e0f5314244964ff2f03fd3da2a386f5c20ad1bf7c1d622` |
 
-The corrected backend cold build took 260 seconds. Maximum-compression export
-and checksum verification took 750 seconds; archive-only reload and complete
-key-free health validation took 85 seconds on the reference VM.
+The final backend cold build took 262 seconds. Maximum-compression export took
+732 seconds; archive-only reload and complete key-free health validation took
+approximately 96 seconds on the reference VM.
 
 ## Paid Smoke Test
 

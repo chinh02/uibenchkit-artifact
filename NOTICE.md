@@ -12,8 +12,12 @@ incorporates the noted third-party code.
 - Repository: https://github.com/NoviScl/Design2Code
 - Code license: MIT License, Copyright (c) 2023 Chenglei Si
 - Dataset license: ODC Attribution License (ODC-By)
+- Preserved license: `UIBenchKit/scripts/metric/Design2Code/CODE_LICENSE`
 
 No Design2Code benchmark dataset is redistributed in this artifact image.
+The DCGen benchmark dataset is also not redistributed; its upstream Hugging
+Face repository did not declare a dataset license when this release was
+prepared.
 
 ## Generation Method References
 
@@ -34,4 +38,3 @@ documentation. No external dataset from those projects is redistributed here.
 Runtime Python, JavaScript, Chromium, model checkpoints, and container base
 images retain their own licenses. Their exact package versions are recorded in
 the lockfiles and image metadata.
-
