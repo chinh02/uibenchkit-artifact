@@ -60,7 +60,7 @@ services using `docker compose up -d --wait`, and run
 `./scripts/health-check.sh`. This key-free check confirms backend, GUI, and CLI
 connectivity. For the full reduced workflow, reviewers place the confidentially
 supplied OpenAI key in an untracked `.env`, export it, and run
-`./scripts/smoke.sh`. Expected output
+`bash ./scripts/smoke.sh`. Expected output
 ends with `SMOKE TEST PASSED` and includes the run identifier and computed CLIP
 score. Detailed commands, expected output, cleanup, claim coverage, and the
 long-running workflow are in the main README.

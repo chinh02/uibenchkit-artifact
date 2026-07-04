@@ -58,3 +58,16 @@ startup and post-run validation, finished in 58 seconds on the reference VM.
 The confidential key was streamed to the VM for this run and both services
 were recreated without it afterward. An automated container-environment check
 confirmed that the key was no longer present.
+
+## README Clean-Room Test
+
+The recommended Zenodo workflow was executed from a new directory containing
+only the five deposited files. All four payload checksums passed, both images
+loaded from their compressed archives, and the expanded source package started
+successfully with `bash ./scripts/health-check.sh`. Backend, CLI, GUI,
+leaderboard, and Playwright browser checks passed with the documented output.
+
+The reference host already used ports 5000 and 3000, so this test also exercised
+the documented `BACKEND_PORT=15000` and `GUI_PORT=13000` overrides. Checksum
+verification, image loading, source extraction, startup, and complete health
+validation took approximately 81 seconds.

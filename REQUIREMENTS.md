@@ -10,6 +10,8 @@
 
 - Docker Engine 24 or newer.
 - Docker Compose plugin 2.20 or newer.
+- Bash, `curl`, `gzip`, `tar`, and GNU `sha256sum` (or a compatible SHA-256
+  checker).
 - 2 CPU cores minimum; 4 recommended for rebuilding images.
 - 8 GB RAM minimum; 16 GB recommended for method development.
 - 25 GB free disk for loading images and running the smoke test.
@@ -19,7 +21,8 @@
   the real-model smoke test; it is provided confidentially during review.
 
 Docker Desktop on Windows or macOS is acceptable when configured for Linux
-containers and at least 8 GB memory. Native Linux is preferred.
+containers and at least 8 GB memory. Run the documented commands from WSL2,
+Git Bash, or another Bash environment. Native Linux is preferred.
 
 ## Optional Full-Experiment Resources
 
