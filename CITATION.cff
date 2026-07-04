@@ -3,7 +3,7 @@ message: "If you use this artifact, please cite the UIBenchKit paper."
 title: "UIBenchKit: A unified toolkit for design-to-code model evaluation"
 type: software
 version: 1.0.0
-date-released: 2026-07-03
+date-released: 2026-07-04
 license: MIT
 doi: 10.5281/zenodo.21175610
 authors:
