@@ -18,9 +18,9 @@
   "images": {
     "backend": {
       "tag": "ghcr.io/chinh02/uibenchkit-backend:v1.0.0-ase2026",
-      "image_id": "sha256:dfa115a15f653ca88bc8288410d927b12f353bb17b3cadf44868101415d07c11",
-      "registry_digest": "sha256:4cc279983c89da30d1456ecdd37270c5a69419e96b9fd04168fad14d2099c1f6",
-      "archive_sha256": "61bdc9de1ec27d3fdf9c38ade72739a81d73e172677c6e02326aadf536765405"
+      "image_id": "sha256:413e386f4f0b240d61123aef078b3f890b37ffac34b32d72a9d1e9c11a867c98",
+      "registry_digest": "sha256:c4fb48254bacda691c22a7181776929583899c9eb798021142ca6e33bcb62774",
+      "archive_sha256": "db27a7598c3106ad9043bc223d1800783695e2ef1bb93572df4bf3bc4e609f6c"
     },
     "gui": {
       "tag": "ghcr.io/chinh02/uibenchkit-gui:v1.0.0-ase2026",
