@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the UIBenchKit paper."
-title: "UIBenchKit: A unified toolkit for design-to-code model evaluation"
+title: "UIBenchKit: A Unified Toolkit for Design-to-Code Model Evaluation"
 type: software
 version: 1.0.0
 date-released: 2026-07-04

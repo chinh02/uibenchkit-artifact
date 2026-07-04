@@ -1,7 +1,7 @@
 # UIBenchKit ASE 2026 Artifact
 
-This package contains the executable artifact for **UIBenchKit: A unified
-toolkit for design-to-code model evaluation**. It provides the UIBenchKit
+This package contains the executable artifact for **UIBenchKit: A Unified
+Toolkit for Design-to-Code Model Evaluation**. It provides the UIBenchKit
 backend, CLI, web interface, and lightweight experiment manifests as pinned
 source repositories, plus prebuilt Linux containers for the executable
 services.
@@ -166,7 +166,9 @@ loading.
 Full benchmark runs require commercial model credentials and hundreds of model
 calls. Raw published runs are archived in the Hugging Face dataset
 `chinh02/UIBenchKit`; lightweight manifests and the leaderboard summarizer are
-in the `uibenchkit-experiments` submodule.
+in the `uibenchkit-experiments` submodule. Dataset provenance, schema, storage,
+licensing, ethical considerations, and usage scenarios are documented in
+[DATA.md](DATA.md).
 
 To regenerate leaderboard tables from the archived run metadata:
 
@@ -208,6 +210,7 @@ uibenchkit-experiments/     manifests and leaderboard summarizer
 docker/                     pinned container definitions and Python lock
 scripts/                    health, smoke, security, and release scripts
 smoke-data/                 one bundled PNG input; no reference HTML
+DATA.md                     data provenance, schema, licensing, and usage
 ```
 
 ## Credentials and Privacy
