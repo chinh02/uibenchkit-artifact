@@ -11,11 +11,10 @@
 
 ## Current Archival Status
 
-The archival release is identified by DOI 10.5281/zenodo.21175610. Post-push
-GHCR digests must still be recorded after container publication. The paid smoke
-test also requires a funded key; the previously configured gateway credential
-returned `insufficient_user_quota`. Key-free validation results are recorded in
-`VALIDATION.md`.
+The archival release is identified by DOI 10.5281/zenodo.21175610. Both
+container images have been pushed to GHCR and their immutable registry digests
+are recorded in `VERSIONS.json`. Key-free validation and a successful paid
+GPT-4o reduced workflow are recorded in `VALIDATION.md`.
 
 ## Limitations
 

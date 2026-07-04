@@ -1,6 +1,6 @@
 # Reference Validation
 
-Validation date: 2026-07-03
+Validation dates: 2026-07-03 to 2026-07-04
 
 ## Host
 
@@ -32,6 +32,9 @@ Validation date: 2026-07-03
 - Image archives passed SHA-256 verification, were removed from Docker,
   reloaded solely from their archives, and passed the complete key-free health
   and browser workflow again.
+- The real GPT-4o reduced workflow completed one instance with zero failures
+  and passed generated HTML, Playwright rendering, CLIP, report, artifact ZIP,
+  GUI proxy, and browser-route assertions.
 
 ## Images
 
@@ -44,10 +47,14 @@ The corrected backend cold build took 260 seconds. Maximum-compression export
 and checksum verification took 750 seconds; archive-only reload and complete
 key-free health validation took 85 seconds on the reference VM.
 
-## External Blocker
+## Paid Smoke Test
 
-The real GPT-4o smoke workflow reached the configured OpenAI-compatible
-provider but received HTTP 403 `insufficient_user_quota` before generation.
-The smoke validator correctly failed because zero instances completed. A
-funded reviewer/maintainer key is required to complete this remaining paid
-validation before the archival release is finalized.
+Run `artifact-smoke-20260704-023847` completed successfully against GPT-4o with
+the `direct` method and bundled screenshot input. It used 846 input and 545
+output tokens (1,391 total), reported an estimated cost of USD 0.0076, and
+produced a CLIP score of 0.7501. The complete smoke command, including service
+startup and post-run validation, finished in 58 seconds on the reference VM.
+
+The confidential key was streamed to the VM for this run and both services
+were recreated without it afterward. An automated container-environment check
+confirmed that the key was no longer present.
