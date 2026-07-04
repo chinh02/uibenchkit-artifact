@@ -8,7 +8,7 @@
     "UIBenchKit": "a1f5199c188cc7d3f77966af87480b2ebfa390df",
     "uibenchkit-cli": "1709edde06d71d92039bda0c5790844e691a9fb8",
     "uibenchkit-GUI": "d5b0925859dfd9cec5f4452bb01cfa502fae644b",
-    "uibenchkit-experiments": "d06b4c3299cbc9e8fe59873b872ac4c2220ac780"
+    "uibenchkit-experiments": "6d684caf5858741905aa67a9a8b65caceaa18e4c"
   },
   "huggingface": {
     "repository": "chinh02/UIBenchKit",
